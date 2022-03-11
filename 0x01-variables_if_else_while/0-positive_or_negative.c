@@ -1,12 +1,11 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+/* more headers goes there */
 /**
- * main - main block
- * Description: Get a random number and print the number
- * and if it is positive, negative, or zero
- * Return: 0
- */
+ * main- main start here
+ * Return: return 0
+*/
 
 int main(void)
 {
