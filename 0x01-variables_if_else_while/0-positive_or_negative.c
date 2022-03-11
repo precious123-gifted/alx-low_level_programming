@@ -29,3 +29,7 @@ printf("%d is zero\n", n);
 }
 return (0);
 }
+/**
+ * 
+ * Return: Always 0 (Success)
+ */
