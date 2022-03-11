@@ -1,12 +1,11 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
-/* more headers goes there */
 /**
- * main- main start here
- * Return: return 0
-*/
-
+ * main - entry point, returns zero, positive, negative based on a number
+ *
+ * Return: always 0
+ */
 int main(void)
 {
 		int n;
