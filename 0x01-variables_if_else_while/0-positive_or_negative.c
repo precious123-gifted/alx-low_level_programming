@@ -1,4 +1,3 @@
-#!/usr/bin/env perl
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
