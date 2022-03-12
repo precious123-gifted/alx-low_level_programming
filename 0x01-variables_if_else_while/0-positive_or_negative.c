@@ -7,7 +7,7 @@
  * Return: 0
  */
 
-/* betty-style file1 [file2 [file3 [...]]]*/
+/* betty-style file1 [file2 [file3 [...]]]  betty-doc file1 [file2 [file3 [...]]] */
 int main(void)
 {
 	int n;
