@@ -2,10 +2,11 @@
 #include <time.h>
 #include <stdlib.h>
 /**
- * main - generates random number and displays whether number
- * is positive, zero, or negative
- * Return: 0
- */
+* main - Prints a random number and states whether
+* it is positive, negative or zero.
+*
+* Return: Always 0.
+*/
 
 /* #betty-style file1 [file2 [file3 [...]]]  betty-doc file1 [file2 [file3 [...]]] */
 int main(void)
