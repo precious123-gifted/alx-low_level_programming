@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include <time.h>
+#include <stdio.h>/r
+#include <time.h>/r
 #include <stdlib.h>
 /**
  * main - main block
