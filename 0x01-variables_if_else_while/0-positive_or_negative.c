@@ -1,12 +1,13 @@
-#include <stdio.h>
-#include <time.h>
-#include <stdlib.h>
+#include<stdio.h>
+#include<time.h>
+#include<stdlib.h>
 /**
-* main - generates random number and displays whether number
-* is positive, zero, or negative
-* Return: 0
+*main - generates random number and displays whether number
+*is positive, zero, or negative
+*Return:0
 */
-int	main(void){
+int main(void)
+{
 int n;
 srand(time(0));
 n = rand() - RAND_MAX / 2;
