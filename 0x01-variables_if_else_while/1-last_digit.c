@@ -1,6 +1,4 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
+#include <stdlib.h>	#include <time.h>	#include <stdio.h>
 /**
  * main - main block
  * Description: Print statements based on the last digit of the random number.
