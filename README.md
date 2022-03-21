@@ -1,1 +1,1 @@
-not empty at all
+C - Pointers, arrays and strings
