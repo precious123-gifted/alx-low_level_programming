@@ -1,1 +1,1 @@
-full
+Even more pointers arrays strings
