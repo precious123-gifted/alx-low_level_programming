@@ -1,80 +1,43 @@
-#include<stdlib.h>
-#include<stdio.h>
-
-#include<stdlib.h>
-
+#include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
 /**
- * ft_strlen - a function
- * @str: the chaine
+ * str_concat - concatenates 2 strings
  *
- * Return: 1 or 0
- */
-
-int ft_strlen(char *str)
-{
-	int i = 0;
-
-	while (str[i])
-		i++;
-	return (i);
-}
-
-/**
- * ft_strcpy - a functio
- * @src: the chaine
+ * @s1: first string
+ * @s2: string to add to end of of first string
  *
- * Return: 1 or 0
+ * Return: pointer to newly allocated string concatenation
  */
-char *ft_strcpy(char *src)
+char *str_concat(char *s1, char *s2)
 {
-	char *str = malloc((ft_strlen(src) + 1) * sizeof(char));
-	int i = 0;
+	unsigned int size1 = 0, size2 = 0;
+	char *ptr, *ret;
 
-	while (src[i])
-	{
-		str[i] = src[i];
-		i++;
-	}
-	return (str);
-}
-
-/**
- * str_concat - a function ...
- * @s1: the chaine
- * @s2: the chaine
- *
- * Return: 1 or 0
- */
-
-char  *str_concat(char *s1, char *s2)
-{
-	char *src;
-	int len1 = 0, i = 0, len2 = 0, j = 0;
-
-	if (s1 == NULL)
+	ptr = s1;
+	if (s1)
+		while (*ptr++)
+			size1++;
+	else
 		s1 = "";
-	if (s2 == NULL)
+
+	ptr = s2;
+	if (s2)
+		while (*ptr++)
+			size2++;
+	else
 		s2 = "";
 
-	len1 = ft_strlen(s1);
-	len2 = ft_strlen(s2);
-	src = malloc((len1 + len2 + 1) * sizeof(char));
-	if (src == NULL)
+	ret = malloc(size1 + size2 + 1);
+	if (!ret)
 		return (NULL);
-	{
-		while (s1[i])
-		{
-			src[i] = s1[i];
-			i++;
-		}
 
-		while (s2[j])
-		{
-			src[i] = s2[j];
-			i++;
-			j++;
-		}
-		src[i] = '\0';
-	}
-	return (src);
+	ptr = ret;
+	while (*s1)
+		*ptr++ = *s1++;
+	while (*s2)
+		*ptr++ = *s2++;
+	*ptr = 0;
+
+	return (ret);
 }
