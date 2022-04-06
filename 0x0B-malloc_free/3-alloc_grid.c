@@ -1,41 +1,46 @@
-#include<stdlib.h>
-#include<stdio.h>
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * alloc_grid - a function ...
- * @width: the chaine
- * @height:
+ * alloc_grid - returns a pointer to a 2 dimensional array of integers
+ * @width: columns
+ * @height: rows
  *
- * Return: 1 or 0
+ * Return: Double Pointer
  */
-
 int **alloc_grid(int width, int height)
 {
-	int **tableau2d;
-	int i, j;
+	int **s;
+	int i, j, k, fr;
 
-	if (width == 0 || height == 0)
-		return (NULL);
-	tableau2d = malloc(height * sizeof(int *));
+	fr = 0;
+	if (width <= 0 || height <= 0)
+		return (0);
 
-	if (tableau2d == NULL)
-		return (NULL);
-
-	for (i = 0; i < height; ++i)
+	s = malloc(height * sizeof(int *));
+	if (s == 0)
+		return (0);
+	for (i = 0; i < height; i++)
 	{
-		tableau2d[i] = malloc(width * sizeof(int));
-		if (tableau2d[i] == NULL)
+		*(s + i) = malloc(width * sizeof(int));
+		if (*(s + i) == 0)
 		{
-			for (; i >= 0; i--)
-				free(tableau2d[i]);
-			free(tableau2d);
-			return (NULL);
+			fr = 1;
+			break;
+		}
+		for (j = 0; j < width; j++)
+		{
+			s[i][j] = 0;
 		}
 	}
-
-	for (i = 0; i < height; ++i)
-		for (j = 0; j < width; j++)
-			tableau2d[i][j] = 0;
-
-	return (tableau2d);
+	if (fr == 1)
+	{
+		for (k = 0; k <= i; k++)
+		{
+			free(*(s + k));
+		}
+		free(s);
+	}
+	return (s);
 }
